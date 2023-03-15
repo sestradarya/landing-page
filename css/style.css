@@ -52,12 +52,17 @@ body {
   z-index: 100;
 }
 .header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 .header__logo {
 }
 .header__menu {
 }
 .menu {
+  
 }
 .menu__icon {
 }
@@ -77,37 +82,7 @@ body {
   display: none;
 }
 
-.icon-menu span,
-.icon-menu::before,
-.icon-menu::after {
-  content: "";
-  transition: all 0.3s ease 0s;
-  right: 0;
-  position: absolute;
-  width: 100%;
-  height: 0.125rem;
-  background-color: black;
-}
-
-.icon-menu::before{
-    top: 0;
-}
-
-.icon-menu::after{
-    bottom: 0;
-}
-
-.icon-menu span{
-    top: calc(50% - 0.0625rem);
-}
-
-@media (any-hover: none) {
-  .icon-menu {
-    cursor: default;
-  }
-}
-
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .icon-menu {
     display: block;
     position: relative;
@@ -115,5 +90,33 @@ body {
     height: 1.125rem;
     z-index: 5;
   }
-  
+  .icon-menu span,
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    background-color: black;
+  }
+
+  .icon-menu::before {
+    top: 0;
+  }
+
+  .icon-menu::after {
+    bottom: 0;
+  }
+
+  .icon-menu span {
+    top: calc(50% - 0.0625rem);
+  }
+}
+
+@media (any-hover: none) and (max-width: 500px) {
+  .icon-menu {
+    cursor: default;
+  }
 }
