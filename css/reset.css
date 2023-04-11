@@ -88,7 +88,7 @@ audio,
 video {
   margin: 0;
   padding: 0;
-  border: 0;  
+  border: 0; 
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -151,10 +151,7 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 
 /* Grouping content
      ========================================================================== */
