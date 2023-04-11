@@ -30,7 +30,7 @@ body {
 }
 
 .subtitle {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--second-text);
   line-height: 143%;
   text-align: center;
@@ -235,6 +235,36 @@ header .blue-button {
 
 /*--------------------------------*/
 
+.partners {
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+}
+.partners .subtitle {
+  padding-bottom: 40px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+.grid-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.item {
+  border: rgb(168, 168, 168) 1px solid;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.partners .blue-button{
+  margin: 50px 0;
+}
+
+/*--------------------------------*/
+
 @media (max-width: 768px) {
   html {
     font-size: 13px;
@@ -247,6 +277,9 @@ header .blue-button {
   .lightning,
   .lightning form {
     flex-direction: column;
+  }
+  .fastest {
+    align-items: center;
   }
   .features-cards,
   .lightning-left {
@@ -262,6 +295,26 @@ header .blue-button {
   }
   .fastest .subtitle {
     text-align: center;
+  }
+  .grid-items {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    align-items: center;
+  }
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    padding: 0px;
+  }
+  .item div {
+    border: rgb(168, 168, 168) 1px solid;
+    padding: 30px;
+    min-width: 230px;
+  }
+  .hide {
+    display: none;
   }
 }
 
