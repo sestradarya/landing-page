@@ -23,16 +23,29 @@
     <title>Landing page</title>
   </head>
   <body>
-    <header>
+    <header id="home">
       <div class="wrapper">
         <nav>
-          <ul class="navigation">
-            <li>Home</li>
-            <li>Product</li>
-            <li>Pricing</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
+          <!-- <div class="navigation menu">
+            <a href="#home">Home</a>
+            <a href="#product">Product</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div> -->
+          <section class="top-nav">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-button-container" for="menu-toggle">
+              <div class="menu-button"></div>
+            </label>
+            <div class="navigation menu">
+              <a href="#home">Home</a>
+              <a href="#product">Product</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </section>
 
           <div class="media-links">
             <i class="fa-brands fa-twitter"></i>
@@ -56,7 +69,7 @@
 
     <main class="page">
       <div class="wrapper">
-        <section class="features">
+        <section class="features" id="product">
           <h3 class="title">Features</h3>
           <p class="subtitle">
             Most calendars are designed for teams. Slate is designed for
@@ -104,12 +117,12 @@
               </div>
             </div>
             <div class="features-video">
-              <img src="./assets/images/video screen desktop.png" alt="" />
+              <img src="./assets/images/video screen desktop.png" alt="video" />
             </div>
           </div>
         </section>
 
-        <section class="fastest">
+        <section class="fastest" id="about">
           <div class="fastest-left">
             <h3 class="title">Fastest way to organize</h3>
             <p class="subtitle">
@@ -210,7 +223,7 @@
         </section>
       </div>
 
-      <section class="pricing">
+      <section class="pricing" id="pricing">
         <div class="wrapper">
           <h3 class="title">Pricing</h3>
           <p class="subtitle">
@@ -279,7 +292,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="wrapper">
           <h3 class="title">Contact Us</h3>
           <p class="subtitle">
@@ -337,7 +350,7 @@
     <footer>
       <div class="wrapper">
         <div class="footer-left">
-          <ul class="footer-pages">
+          <ul>
             <li>Pages</li>
             <li>Home</li>
             <li>Product</li>
@@ -345,7 +358,7 @@
             <li>About</li>
             <li>Contact</li>
           </ul>
-          <ul class="footer-thomothy">
+          <ul>
             <li>Tomothy</li>
             <li>Eleanor Edwards</li>
             <li>Ted Robertson</li>
@@ -353,7 +366,7 @@
             <li>Jennie Mckinney</li>
             <li>Gloria Richards</li>
           </ul>
-          <ul class="footer-jane">
+          <ul>
             <li>Jane Black</li>
             <li>Philip Jones</li>
             <li>Product</li>
@@ -365,7 +378,7 @@
         <div class="footer-right">
           <div class="location">
             <i class="fa-solid fa-location-dot"></i>
-            <p>7480 Mockingbird Hill undefined </p>
+            <p>7480 Mockingbird Hill undefined</p>
           </div>
           <div class="phone">
             <i class="fa-solid fa-phone"></i>

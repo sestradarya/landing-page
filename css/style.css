@@ -43,7 +43,7 @@ body {
   outline: none;
   border: none;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
 
   box-shadow: #717171 2px 2px 6px;
@@ -92,12 +92,14 @@ nav {
   flex-wrap: wrap;
 }
 
-.navigation li {
-  font-size: 1rem;
+.navigation a {
+  font-size: 16px;
   margin: 0 20px 4px 0;
+  color: #fff;
+  text-decoration: none;
 }
 
-.navigation li:hover{
+.navigation a:hover{
   border-bottom: #dddddd 2px solid;
   transition: all .1s;
   cursor: pointer;
@@ -181,13 +183,13 @@ header .blue-button {
 
 .card-title {
   font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: var(--text);
   line-height: 140%;
 }
 
 .card-text {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--second-text);
   line-height: 139%;
 }
@@ -219,7 +221,7 @@ header .blue-button {
 .suppertitle {
   color: var(--text);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
 }
 .lightning .title {
   text-align: left;
@@ -228,7 +230,7 @@ header .blue-button {
   padding-top: 20px;
 }
 .form-caption .text {
-  font-size: 1.075rem;
+  font-size: 1.2rem;
   color: var(--second-text);
 }
 .lightning .blue-button {
@@ -248,7 +250,7 @@ header .blue-button {
   background-color: #f4f4f4;
   border: none;
   outline: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--second-text);
 }
 
@@ -341,23 +343,25 @@ header .blue-button {
   border-radius: 10px;
 }
 .packet-name {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   text-transform: uppercase;
   color: var(--text);
   font-weight: 700;
 }
 .packet-description {
+  text-align: center;
   color: var(--second-text);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .packet-price {
   display: flex;
   align-items: center;
   gap: 8px;
   color: var(--text);
+  font-size: 1.3rem;
 }
 .price {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
 }
 .packet-price i {
@@ -371,7 +375,7 @@ header .blue-button {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 .packet .blue-button {
   font-size: 1.25rem;
@@ -445,6 +449,7 @@ header .blue-button {
   text-align: center;
   color: var(--text);
   font-weight: 700;
+  font-size: 1.3rem;
 }
 
 .contact-form input,
@@ -452,6 +457,7 @@ textarea {
   background: #f5f5f5;
   border: 1px solid #e8e8e8;
   border-radius: 39px;
+  font-size: 1.3rem;
 
   padding: 1rem;
 }
@@ -491,7 +497,7 @@ textarea {
 
 .contact .info .item p {
   color: var(--second-text);
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -563,8 +569,6 @@ footer .wrapper {
   font-size: 1rem;
 }
 
-.media-links {
-}
 
 /*--------------------------------*/
 
@@ -681,5 +685,127 @@ footer .wrapper {
     flex-direction: column;
     text-align: center;
     gap: 28px;
+  }
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------------*/
+
+
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > a {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 768px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 30px;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu a {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu a {
+    border: 1px solid rgb(168, 168, 168);
+    height: 1.3em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > a {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 80%;
+    color: white;
+    background-color: #8e8e8e;
+  }
+  .menu > a:not(:last-child) {
+    border-bottom: 1px solid #444;
   }
 }
